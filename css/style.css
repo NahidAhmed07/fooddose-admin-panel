@@ -277,7 +277,51 @@ div.dataTables_filter input:focus {
   background: #f46f22 !important;
 }
 
+/* file upload button  */
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 3px;
+}
+.custom-file-input::before {
+  content: "Select Files";
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border-right: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  transition: 0.3s;
+}
+.custom-file-input:hover::before {
+  border-color: rgb(119, 119, 119);
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
 /* azad vai  start */
+
+/* AZAD */
+
+@media only screen and (max-width: 1200px) {
+  .offcanvas-backdrop::before {
+    position: relative;
+  }
+  .dropdown-menu-end[data-bs-popper] {
+    right: 0;
+    left: -145px;
+  }
+}
 
 .dropdown-menu {
   border-radius: 20px;

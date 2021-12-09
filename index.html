@@ -9,19 +9,21 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
 
-<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="./plugin/datatable/datatables.min.css"/>
+  <link rel="stylesheet" href="./plugin/summernote/summernote.min.css">
+  <link rel="stylesheet" href="./plugin/sweetalert/sweetalert2.min.css">
+  <link rel="stylesheet" href="./plugin/datatable/datatables.min.css" />
   <link rel="stylesheet" href="./plugin/toaster/jquery.toast.css">
-  
- 
+
+
   <!-- <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" /> -->
   <link rel="stylesheet" href="css/style.css" />
   <title>Food Doose Dashboard</title>
   <style>
-    body{
+    body {
       overflow-x: hidden !important;
     }
+
   </style>
 </head>
 
@@ -35,9 +37,9 @@
 
 
       <!-- offcanvas toggle btn -->
-      <button class="offcanvas-button"  type="button " data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+      <button class="offcanvas-button" type="button " data-bs-toggle="offcanvas" data-bs-target="#sidebar"
         aria-controls="offcanvasExample">
-        
+
         <span><i data-bs-target="#sidebar" class="bi bi-layout-text-sidebar-reverse"></i></span>
       </button>
 
@@ -51,13 +53,13 @@
       <!-- navbar toggle button  -->
       <button class="navbar-toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
         aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i  data-bs-target="#sidebar" class="bi bi-list"></i></span>
+        <span><i data-bs-target="#sidebar" class="bi bi-list"></i></span>
       </button>
 
       <!-- navbar item -->
       <div class="collapse navbar-collapse" id="topNavBar">
 
-        
+
 
         <form class="d-flex ms-auto my-3 my-lg-0">
           <div class="input-group">
@@ -69,11 +71,15 @@
         </form>
 
 
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
 
-
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-
+          <!-- problem solve  -->
           <div class="offcanvas-body p-0">
+            <div class="offcanvas-header d-md-none ">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inbox</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
 
             <!--**********************************
             Chat box start
@@ -135,7 +141,7 @@
                               </div>
                             </div>
                           </li>
-                          
+
                           <li class="name-first-letter">B</li>
                           <li class="dlab-chat-user">
                             <div class="d-flex bd-highlight">
@@ -161,11 +167,11 @@
                               </div>
                             </div>
                           </li>
-                          
+
                         </ul>
                       </div>
                     </div>
-                    
+
                   </div>
                   <div class="tab-pane fade" id="alerts" role="tabpanel">
                     <div class="card mb-sm-3 mb-md-0 contacts_card border-0">
@@ -179,7 +185,7 @@
                         <a href="javascript:void(0);"><i class="bi bi-search"></i>
                         </a>
                       </div>
-                    
+
                       <div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body1">
                         <ul class="contacts">
                           <li class="name-first-letter">SEVER STATUS</li>
@@ -251,7 +257,8 @@
                               <div class="ms-auto">
                                 <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1">
                                   <i class="bi bi-pencil-fill"></i></i></a>
-                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="bi bi-trash"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
+                                    class="bi bi-trash"></i></a>
                               </div>
                             </div>
                           </li>
@@ -262,8 +269,10 @@
                                 <p>10 Aug 2020</p>
                               </div>
                               <div class="ms-auto">
-                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="bi bi-pencil-fill"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="bi bi-trash"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i
+                                    class="bi bi-pencil-fill"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
+                                    class="bi bi-trash"></i></a>
                               </div>
                             </div>
                           </li>
@@ -274,8 +283,10 @@
                                 <p>10 Aug 2020</p>
                               </div>
                               <div class="ms-auto">
-                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="bi bi-pencil-fill"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="bi bi-trash"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i
+                                    class="bi bi-pencil-fill"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
+                                    class="bi bi-trash"></i></a>
                               </div>
                             </div>
                           </li>
@@ -286,8 +297,10 @@
                                 <p>10 Aug 2020</p>
                               </div>
                               <div class="ms-auto">
-                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i class="bi bi-pencil-fill"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i class="bi bi-trash"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-primary btn-xs sharp me-1"><i
+                                    class="bi bi-pencil-fill"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-danger btn-xs sharp"><i
+                                    class="bi bi-trash"></i></a>
                               </div>
                             </div>
                           </li>
@@ -322,14 +335,14 @@
 
           <!-- Notificaiton  -->
 
-          <li class="nav-itme dropdown">
+          <li class="nav-itme dropdown position-relative">
             <a class="nav-link navbar-dropdown-toggle dropdown-toggle ms-2" href="#" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-bell fs-4"></i>
               <span
                 class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
             </a>
-            <ul class="dropdown-menu border-0 shadow-lg p-3 dropdown-menu-end" style="width: 320px;">
+            <ul class="dropdown-menu border-0 shadow-lg p-3 dropdown-menu-end position-absolute" style="width: 320px;">
 
               <li class="my-2">
                 <div class="timeline-panel d-flex justify-content-around">
@@ -372,12 +385,12 @@
             </ul>
           </li>
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown position-relative">
             <a class="nav-link navbar-dropdown-toggle dropdown-toggle ms-2" href="#" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <img width="40px" class="rounded-circle" src="./images/user.jpg" alt="">
             </a>
-            <ul class="dropdown-menu border-0 shadow-lg p-3 dropdown-menu-end">
+            <ul class="dropdown-menu border-0 shadow-lg p-3 dropdown-menu-end position-absolute">
               <li>
                 <a href="app-profile.html" class="dropdown-item ai-icon">
                   <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18"
@@ -487,7 +500,7 @@
           <!-- Orders item -->
 
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="orders"  data-bs-toggle="collapse" href="#Orders">
+            <a class="nav-link px-3 sidebar-link" data-name="orders" data-bs-toggle="collapse" href="#Orders">
               <span class="me-2"><i class="bi bi-clipboard-data"></i></span>
               <span>Orders</span>
               <span class="right-icon ms-auto">
@@ -512,7 +525,7 @@
                 <li class="sidebar-sub-list">
                   <a href="#" class="nav-link px-3 sidebar-sub-link">
                     <i class="bi bi-dash "></i>
-                    <span>Order Delivery in Progress</span>
+                    <span>Order Delivery in <span class="ms-4">Progress</span></span>
                   </a>
                 </li>
                 <li class="sidebar-sub-list">
@@ -547,7 +560,7 @@
 
           <!-- Delivery Main-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="delivery"  data-bs-toggle="collapse" href="#delivery">
+            <a class="nav-link px-3 sidebar-link" data-name="delivery" data-bs-toggle="collapse" href="#delivery">
               <span class="me-2"><i class="bi bi-people-fill"></i></span>
               <span>Delivery Man</span>
               <span class="ms-auto">
@@ -587,7 +600,7 @@
           </li>
           <!-- Account  -->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="account"  data-bs-toggle="collapse" href="#account">
+            <a class="nav-link px-3 sidebar-link" data-name="account" data-bs-toggle="collapse" href="#account">
               <span class="me-2"><i class="bi bi-person-badge"></i></span>
               <span>Accounts</span>
               <span class="ms-auto">
@@ -664,7 +677,7 @@
 
           <!--  Delivery area-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="area"  data-bs-toggle="collapse" href="#delivery-area">
+            <a class="nav-link px-3 sidebar-link" data-name="area" data-bs-toggle="collapse" href="#delivery-area">
               <span class="me-2"><i class="bi bi-geo-alt"></i></span>
               <span>Delivery Area</span>
               <span class="ms-auto">
@@ -694,7 +707,7 @@
 
           <!--  coupon-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="coupon"  data-bs-toggle="collapse" href="#coupon">
+            <a class="nav-link px-3 sidebar-link" data-name="coupon" data-bs-toggle="collapse" href="#coupon">
               <span class="me-2"><i class="bi bi-file-earmark-code-fill"></i></span>
               <span>Coupon</span>
               <span class="ms-auto">
@@ -724,7 +737,7 @@
 
           <!--  support-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="support"  data-bs-toggle="collapse" href="#support">
+            <a class="nav-link px-3 sidebar-link" data-name="support" data-bs-toggle="collapse" href="#support">
               <span class="me-2"><i class="bi bi-question-diamond"></i></span>
               <span>Support</span>
               <span class="ms-auto">
@@ -754,7 +767,7 @@
 
           <!--  Notice board-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="notice"  data-bs-toggle="collapse" href="#notice">
+            <a class="nav-link px-3 sidebar-link" data-name="notice" data-bs-toggle="collapse" href="#notice">
               <span class="me-2"><i class="bi bi-clipboard-check"></i></span>
               <span>Notice Board</span>
               <span class="ms-auto">
@@ -790,7 +803,7 @@
 
           <!--  Setting-->
           <li class="sidebar-list">
-            <a class="nav-link px-3 sidebar-link" data-name="setting"  data-bs-toggle="collapse" href="#Setting">
+            <a class="nav-link px-3 sidebar-link" data-name="setting" data-bs-toggle="collapse" href="#Setting">
               <span class="me-2"><i class="bi bi-gear"></i></span>
               <span>Setting</span>
               <span class="ms-auto">
@@ -809,7 +822,7 @@
                 </li>
 
                 <li class="sidebar-sub-list">
-                  <a href="/form.html" class="nav-link px-3 sidebar-sub-link">
+                  <a href="./form.html" class="nav-link px-3 sidebar-sub-link">
                     <i class="bi bi-dash "></i>
                     <span>Form design</span>
                   </a>
@@ -864,11 +877,11 @@
         <div class="col-xl-6 mb-3">
           <div class="">
             <h5 class="fw-bold">RECENT ORDERS REQUESTED</h5>
-            
+
           </div>
 
           <div class="table-responsive mt-4">
-            <table class="table table-hover" >
+            <table class="table table-hover">
               <thead class="order-request-table">
                 <tr>
                   <th>Food Item</th>
@@ -973,20 +986,20 @@
 
       <div class="row">
         <div class="col-12">
-            <h5 class="fw-bold my-5">TRENDING ORDERS</h5>
+          <h5 class="fw-bold my-5">TRENDING ORDERS</h5>
         </div>
         <div class=" col-md-6 col-xl-3 mb-3">
           <div class="card">
             <img src="./images/food-5.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-             <div class="d-flex justify-content-between align-items-center">
-               <h6 class="fw-bold">Meat Stew</h6>
-               <p class="fw-bold text-success"><small>$25.00</small></p>
-             </div>
-             <div class="d-flex justify-content-between align-items-center">
-               <p class="text-muted">Orders <span class="text-danger">15</span></p>
-               <p class="text-muted">Income <span class="text-danger">$175</span></p>
-             </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold">Meat Stew</h6>
+                <p class="fw-bold text-success"><small>$25.00</small></p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-muted">Orders <span class="text-danger">15</span></p>
+                <p class="text-muted">Income <span class="text-danger">$175</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -994,14 +1007,14 @@
           <div class="card">
             <img src="./images/food-4.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-             <div class="d-flex justify-content-between align-items-center">
-               <h6 class="fw-bold">Meat Stew</h6>
-               <p class="fw-bold text-success"><small>$25.00</small></p>
-             </div>
-             <div class="d-flex justify-content-between align-items-center">
-               <p class="text-muted">Orders <span class="text-danger">15</span></p>
-               <p class="text-muted">Income <span class="text-danger">$175</span></p>
-             </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold">Meat Stew</h6>
+                <p class="fw-bold text-success"><small>$25.00</small></p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-muted">Orders <span class="text-danger">15</span></p>
+                <p class="text-muted">Income <span class="text-danger">$175</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -1009,14 +1022,14 @@
           <div class="card">
             <img src="./images/food-5.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-             <div class="d-flex justify-content-between align-items-center">
-               <h6 class="fw-bold">Meat Stew</h6>
-               <p class="fw-bold text-success"><small>$25.00</small></p>
-             </div>
-             <div class="d-flex justify-content-between align-items-center">
-               <p class="text-muted">Orders <span class="text-danger">15</span></p>
-               <p class="text-muted">Income <span class="text-danger">$175</span></p>
-             </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold">Meat Stew</h6>
+                <p class="fw-bold text-success"><small>$25.00</small></p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-muted">Orders <span class="text-danger">15</span></p>
+                <p class="text-muted">Income <span class="text-danger">$175</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -1024,14 +1037,14 @@
           <div class="card">
             <img src="./images/food-4.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-             <div class="d-flex justify-content-between align-items-center">
-               <h6 class="fw-bold">Meat Stew</h6>
-               <p class="fw-bold text-success"><small>$25.00</small></p>
-             </div>
-             <div class="d-flex justify-content-between align-items-center">
-               <p class="text-muted">Orders <span class="text-danger">15</span></p>
-               <p class="text-muted">Income <span class="text-danger">$175</span></p>
-             </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <h6 class="fw-bold">Meat Stew</h6>
+                <p class="fw-bold text-success"><small>$25.00</small></p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="text-muted">Orders <span class="text-danger">15</span></p>
+                <p class="text-muted">Income <span class="text-danger">$175</span></p>
+              </div>
             </div>
           </div>
         </div>
@@ -1047,7 +1060,7 @@
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table id="order-table" class="table  data-table table-hover" >
+                <table id="order-table" class="table  data-table table-hover">
                   <thead class="table-header-style">
                     <tr>
                       <th>Order ID</th>
@@ -1087,16 +1100,11 @@
 
   </main>
   <script src="./js/jquery-3.5.1.js"></script>
-  
   <script src="./js/bootstrap.bundle.min.js"></script>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
-
-  <script src="./plugin/datatable/datatables.min.js" ></script>
+  <script src="./plugin/chatjs/chart.min.js"></script>
+  <script src="./plugin/summernote/summernote.min.js"></script>
+  <script src="./plugin//sweetalert/sweetalert2.min.js"></script>
+  <script src="./plugin/datatable/datatables.min.js"></script>
   <script src="./plugin/datatable/dataTables.bootstrap5.min.js"></script>
   <script src="./plugin/toaster/jquery.toast.js"></script>
   <script src="./js/script.js"></script>

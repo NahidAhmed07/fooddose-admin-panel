@@ -152,7 +152,10 @@ color: #a590cf;
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
      }
-
+     .nav-tabs .nav-link:hover{
+       color: #6c4bae;
+       border-bottom: 1px solid #6c4bae;
+     }
 .nav-pills .nav-link {
   background: none;
   border: 0;

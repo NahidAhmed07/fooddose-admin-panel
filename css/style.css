@@ -82,6 +82,24 @@ button {
   content: "" !important;
 }
 
+
+.dropdown-menu{
+  border-radius: 20px;
+}
+.dropdown-item:hover{
+color: #a590cf;
+}
+.dropdown-menu > ul > li{
+  margin: 20px 0;
+}
+
+.bradius{
+  border-radius: 12px;
+}
+
+
+
+
 .table-header-style {
   background: #f46f22;
   color: white;

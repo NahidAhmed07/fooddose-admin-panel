@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.accordion-button[aria-expanded="true"] {
+  color: #f46f22 !important;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.sidebar-list {
+  margin: 7px 0;
+}
+
+.sidebar-link,
+.sidebar-sub-link {
+  color: #3b3b3b !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-link:hover {
+  color: #f46f22 !important;
+}
+
+.sidebar-sub-link:hover {
+  color: #f46f22 !important;
+}
+
+.sidebar-sub-list {
+  margin: 5px 0;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  background-color: #b6b6b6 !important;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.navbar-dropdown-toggle::after {
+  display: none;
+  content: "" !important;
+}
+
+.table-header-style {
+  background: #f46f22;
+  color: white;
+  border-radius: 5px;
+}
+
+/* .order-table-body tr {
+  transition: 0.3s;
+}
+.order-table-body tr:hover {
+  background: rgba(204, 204, 204, 0.623);
+} */
+
+.fd-btn {
+  background: #f46f22;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 2px;
+  transition: 0.3s;
+  outline: 1px solid white;
+}
+
+.fd-btn:hover {
+  background: #d45003;
+}
+
+/* .sidebar-sub-link::before {
+  content: "";
+  width: 5px;
+  height: 2px;
+  background: red;
+  display: block;
+  position: relative;
+  top: 50%;
+} */
+
+.dataTables_filter label {
+  background: #f46f22;
+  color: white;
+  border: none;
+  padding: 0px 0px 0px 15px;
+  border-radius: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: 1px solid white;
+}
+
+.dataTables_filter label:hover {
+  background: #d45003;
+}
+
+.dataTables_length label {
+  font-weight: 500;
+}
+
+.paginate_button .active {
+  background: #f46f22 !important;
+  color: white;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 2px;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: 1px solid white;
+}

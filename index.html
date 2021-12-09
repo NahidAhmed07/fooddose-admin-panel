@@ -59,37 +59,38 @@
             </button>
           </div>
         </form>
-        <ul class="navbar-nav flex-row gap-3 mt-4 mt-lg-0 justify-content-center">
-          <li class="nav-itme dropdown">
-            <a class="nav-link navbar-dropdown-toggle dropdown-toggle ms-2" href="#" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-              <span><i class="bi bi-envelope fs-4"></i></span>
-              <span
-                class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
-              </span>
-            </a>
+
+
+
+
+
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+
+          <div class="offcanvas-body p-0">
+
             <!--**********************************
             Chat box start
         ***********************************-->
 
-            <div class="chatbox dropdown-menu border-0 shadow-lg p-3 dropdown-menu-end" style="width: 320px;">
+            <div class="chatbox border-0 shadow-lg p-3 " style="min-width: 320px;">
               <div class="chatbox-close"></div>
               <div class="custom-tab-1">
                 <ul class="nav nav-tabs">
                   <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#notes">Notes</a>
+                    <a class="nav-link border-0" data-bs-toggle="tab" href="#notes">Notes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" data-bs-toggle="tab" href="#alerts">Alerts</a>
+                    <a class="nav-link border-0" data-bs-toggle="tab" href="#alerts">Alerts</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" data-bs-toggle="tab" href="#chat">Chat</a>
+                  <li class="nav-item ">
+                    <a class="nav-link active border-0" data-bs-toggle="tab" href="#chat">Chat</a>
                   </li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane fade active show" id="chat" role="tabpanel">
-                    <div class="card mb-sm-3 mb-md-0 contacts_card dlab-chat-user-box">
-                      <div class="card-header chat-list-header text-center">
+                    <div class="card mb-sm-3 mb-md-0 contacts_card dlab-chat-user-box border-0">
+                      <div class="text-center d-flex justify-content-between align-items-center p-3">
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
                             version="1.1">
@@ -99,21 +100,26 @@
                                 transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
                                 x="4" y="11" width="16" height="2" rx="1"></rect>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                         <div>
                           <h6 class="mb-1">Chat List</h6>
-                          <p class="mb-0">Show All</p>
+                          <p class="mb-0" style="font-size: 12px;">Show All</p>
                         </div>
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
                             version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                               <rect x="0" y="0" width="24" height="24"></rect>
-                              <circle fill="#000000" cx="5" cy="12" r="2"></circle>
-                              <circle fill="#000000" cx="12" cy="12" r="2"></circle>
-                              <circle fill="#000000" cx="19" cy="12" r="2"></circle>
+                              <path
+                                d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+                                fill="#000000" fill-rule="nonzero" opacity="0.3"></path>
+                              <path
+                                d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+                                fill="#000000" fill-rule="nonzero"></path>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                       </div>
                       <div class="card-body contacts_body p-0 dlab-scroll  " id="DLAB_W_Contacts_Body">
                         <ul class="contacts">
@@ -487,21 +493,22 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="alerts" role="tabpanel">
-                    <div class="card mb-sm-3 mb-md-0 contacts_card">
-                      <div class="card-header chat-list-header text-center">
+                    <div class="card mb-sm-3 mb-md-0 contacts_card border-0">
+                      <div class="text-center d-flex justify-content-between align-items-center p-3">
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
                             version="1.1">
                             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <rect x="0" y="0" width="24" height="24"></rect>
-                              <circle fill="#000000" cx="5" cy="12" r="2"></circle>
-                              <circle fill="#000000" cx="12" cy="12" r="2"></circle>
-                              <circle fill="#000000" cx="19" cy="12" r="2"></circle>
+                              <rect fill="#000000" x="4" y="11" width="16" height="2" rx="1"></rect>
+                              <rect fill="#000000" opacity="0.3"
+                                transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+                                x="4" y="11" width="16" height="2" rx="1"></rect>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                         <div>
                           <h6 class="mb-1">Notications</h6>
-                          <p class="mb-0">Show All</p>
+                          <p class="mb-0" style="font-size: 12px;">Show All</p>
                         </div>
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
@@ -515,8 +522,10 @@
                                 d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
                                 fill="#000000" fill-rule="nonzero"></path>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                       </div>
+                    
                       <div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body1">
                         <ul class="contacts">
                           <li class="name-first-letter">SEVER STATUS</li>
@@ -564,8 +573,8 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="notes">
-                    <div class="card mb-sm-3 mb-md-0 note_card">
-                      <div class="card-header chat-list-header text-center">
+                    <div class="card mb-sm-3 mb-md-0 note_card border-0">
+                      <div class="text-center d-flex justify-content-between align-items-center p-3">
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
                             version="1.1">
@@ -575,10 +584,11 @@
                                 transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
                                 x="4" y="11" width="16" height="2" rx="1"></rect>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                         <div>
                           <h6 class="mb-1">Notes</h6>
-                          <p class="mb-0">Add New Nots</p>
+                          <p class="mb-0" style="font-size: 12px;">Add New Nots</p>
                         </div>
                         <a href="javascript:void(0);"><svg xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px" viewbox="0 0 24 24"
@@ -592,7 +602,8 @@
                                 d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
                                 fill="#000000" fill-rule="nonzero"></path>
                             </g>
-                          </svg></a>
+                          </svg>
+                        </a>
                       </div>
                       <div class="card-body contacts_body p-0 dlab-scroll" id="DLAB_W_Contacts_Body2">
                         <ul class="contacts">
@@ -660,9 +671,26 @@
               </div>
             </div>
             <!--**********************************
-            Chat box End
-        ***********************************-->
-          </li>
+        Chat box End
+    ***********************************-->
+
+
+          </div>
+        </div>
+
+
+        <ul class="navbar-nav flex-row gap-3 mt-4 mt-lg-0 justify-content-center">
+
+          <a class="nav-link ms-2" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">
+            <span><i class="bi bi-envelope fs-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"></i></span>
+            <span data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+              class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
+            </span>
+          </a>
+
+
 
           <!-- Notificaiton  -->
 

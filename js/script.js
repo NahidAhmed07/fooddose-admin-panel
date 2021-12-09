@@ -1,6 +1,90 @@
 $(document).ready(function () {
   $(".data-table").each(function (_, table) {
-    $(table).DataTable();
+    $(table).DataTable({
+      responsive: true,
+      dom: "Blfrtip",
+      buttons: ["copy", "csv", "excel", "pdf", "print"],
+    });
+  });
+
+  // toaster main function
+  function openToast(text, icon, bgColor) {
+    $.toast({
+      text: `<h6 class="my-2">${text}</h6>`,
+      icon: icon,
+      showHideTransition: "slide",
+      bgColor: bgColor,
+      textColor: "#eee",
+      hideAfter: 3000,
+      textAlign: "left",
+      position: "top-right",
+    });
+  }
+
+  $("#toast-success").click(() => {
+    openToast("This is a success toast message", "success", "#269940");
+  });
+
+  $("#toast-error").click(() => {
+    openToast("This is a Error toast message", "error", "#F44E42");
+  });
+
+  $("#toast-warning").click(() => {
+    openToast("This is a warning toast message", "warning", "#FFA205");
+  });
+
+  $("#toast-info").click(() => {
+    openToast("This is a info toast message", "info", "#18A2B8");
+  });
+
+  // sweet alert
+
+  $("#alert-success").click(() => {
+    Swal.fire({
+      icon: "success",
+      title: "Successful",
+      text: "This is a Success Alert ",
+    });
+  });
+
+  $("#alert-error").click(() => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "This is an Error Alert",
+    });
+  });
+
+  $("#alert-warning").click(() => {
+    Swal.fire({
+      icon: "warning",
+      title: "Oops...",
+      text: "This is a Warning Alert",
+    });
+  });
+
+  $("#alert-info").click(() => {
+    Swal.fire({
+      icon: "info",
+      title: "Info...",
+      text: "This is a info Alert",
+    });
+  });
+
+  $("#alert-delete").click(() => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
   });
 });
 
@@ -53,23 +137,3 @@ const orderTable = document.querySelector(".order-table-body");
 
   document.querySelector(".order-table-body").appendChild(tr);
 });
-
-// const sidebarItems = document.querySelectorAll(".sidebar-link");
-
-// sidebarItems.forEach((item) => {
-//   item.addEventListener("click", function (e) {
-//     e.stopImmediatePropagation();
-//     const currentName = this.dataset.name;
-
-//     for (const item of sidebarItems) {
-//       const name = item.dataset.name;
-//       if (currentName === name) {
-//         continue;
-//       } else {
-//         item.classList.add("collapsed");
-//         item.nextElementSibling.style.transition = "all 1s";
-//         item.nextElementSibling.classList.remove("show");
-//       }
-//     }
-//   });
-// });

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="sweetalert2.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="./plugin/datatable/datatables.min.css" />
+  <link rel="stylesheet" href="./plugin/toaster/jquery.toast.css">
+
+
+  <!-- <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" /> -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Food Doose Dashboard</title>
+  <style>
+    body {
+      overflow-x: hidden !important;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <!--###########################   main navigation  ########################################### -->
+  <nav class="navbar navbar-expand-xl navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+
+
+      <!-- offcanvas toggle btn -->
+      <button class="offcanvas-button" type="button " data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+        aria-controls="offcanvasExample">
+
+        <span><i data-bs-target="#sidebar" class="bi bi-layout-text-sidebar-reverse"></i></span>
+
+      </button>
+
+
+      <!-- navbar logo -->
+
+      <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="/index.html">
+        <img width="150px" src="./images/logo.png" alt="">
+      </a>
+
+      <!-- navbar toggle button  -->
+      <button class="navbar-toggle-button" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar"
+        aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i data-bs-target="#sidebar" class="bi bi-list"></i></span>
+      </button>
+
+      <!-- navbar item -->
+      <div class="collapse navbar-collapse" id="topNavBar">
+
+
+
+        <form class="d-flex ms-auto my-3 my-lg-0">
+          <div class="input-group">
+            <input class="form-control navbar-search-field" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-transparent" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+        <ul class="navbar-nav flex-row gap-3 mt-4 mt-lg-0 justify-content-center">
+          <li class="nav-itme ">
+            <a href="" class="nav-link position-relative">
+              <span><i class="bi bi-envelope fs-4"></i></span>
+              <span
+                class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
+              </span>
+            </a>
+          </li>
+          <li class="nav-itme">
+            <a href="" class="nav-link">
+              <i class="bi bi-bell fs-4"></i>
+              <span
+                class="position-absolute top-25 start-75 translate-middle p-1 bg-danger border border-light rounded-circle">
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link navbar-dropdown-toggle dropdown-toggle ms-2" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img width="40px" class="rounded-circle" src="./images/user.jpg" alt="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--###########################   main navigation  ########################################### -->
+
+
+
+
+
+
+  <!--###########################    side navigation offcanvas ########################################### -->
+
+  <div class="offcanvas offcanvas-start sidebar-nav bg-light" tabindex="-1" id="sidebar">
+    <div class="offcanvas-body p-0">
+
+
+
+      <nav class="navbar-light">
+        <ul class="navbar-nav sidebar-parent text-dark mt-3 ms-2">
+          <!-- Merchants item -->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="merchant" data-bs-toggle="collapse" href="#dashboard">
+              <span class="me-2"><i class="bi bi-grid-1x2-fill"></i></span>
+              <span>Merchants</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="dashboard">
+              <ul class="navbar-nav ps-3 ">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Merchants</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Merchants</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Pending Merchants</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Rejected Merchants</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Restaurants</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!-- Orders item -->
+
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="orders" data-bs-toggle="collapse" href="#Orders">
+              <span class="me-2"><i class="bi bi-clipboard-data"></i></span>
+              <span>Orders</span>
+              <span class="right-icon ms-auto">
+                <i class="bi bi-chevron-down"></i>
+              </span>
+              </span>
+            </a>
+            <div class="collapse" id="Orders">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Pending Order List</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Order List</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Order Delivery in Progress</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Order Delivered</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Order Hold</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Order Returning</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Rejected Order</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+
+
+          <!-- Delivery Main-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="delivery" data-bs-toggle="collapse" href="#delivery">
+              <span class="me-2"><i class="bi bi-people-fill"></i></span>
+              <span>Delivery Man</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="delivery">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Delivery Man</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Pending Delivery Man</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Rejected Delivery Man</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Delivery Man</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <!-- Account  -->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="account" data-bs-toggle="collapse" href="#account">
+              <span class="me-2"><i class="bi bi-person-badge"></i></span>
+              <span>Accounts</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="account">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Account Overview</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Make Payment</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Invoice</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Invoice</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Unpaid Parcel</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Paid Parcel</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Payment History</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Income</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Expenses</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Make Salary</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <!--  Delivery area-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="area" data-bs-toggle="collapse" href="#delivery-area">
+              <span class="me-2"><i class="bi bi-geo-alt"></i></span>
+              <span>Delivery Area</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="delivery-area">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Area</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>View All Area</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+          <!--  coupon-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="coupon" data-bs-toggle="collapse" href="#coupon">
+              <span class="me-2"><i class="bi bi-file-earmark-code-fill"></i></span>
+              <span>Coupon</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="coupon">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Coupon</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Coupon</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+          <!--  support-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="support" data-bs-toggle="collapse" href="#support">
+              <span class="me-2"><i class="bi bi-question-diamond"></i></span>
+              <span>Support</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="support">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Support Request</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Completed Support</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+          <!--  Notice board-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="notice" data-bs-toggle="collapse" href="#notice">
+              <span class="me-2"><i class="bi bi-clipboard-check"></i></span>
+              <span>Notice Board</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="notice">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Add Notice</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Today Notice</span>
+                  </a>
+                </li>
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>All Notice</span>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </li>
+
+          <!--  Setting-->
+          <li class="sidebar-list">
+            <a class="nav-link px-3 sidebar-link" data-name="setting" data-bs-toggle="collapse" href="#Setting">
+              <span class="me-2"><i class="bi bi-gear"></i></span>
+              <span>Setting</span>
+              <span class="ms-auto">
+                <span class="right-icon">
+                  <i class="bi bi-chevron-down"></i>
+                </span>
+              </span>
+            </a>
+            <div class="collapse" id="Setting">
+              <ul class="navbar-nav ps-3">
+                <li class="sidebar-sub-list">
+                  <a href="#" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Frontend Section</span>
+                  </a>
+                </li>
+
+                <li class="sidebar-sub-list">
+                  <a href="/form.html" class="nav-link px-3 sidebar-sub-link">
+                    <i class="bi bi-dash "></i>
+                    <span>Form design</span>
+                  </a>
+                </li>
+
+
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+
+  <!--###########################    side navigation offcanvas ########################################### -->
+
+
+
+
+
+  <!--###########################    main content body ########################################### -->
+
+  <main class="mt-5 pt-5">
+    <div class="container-fluid">
+
+      <!--####################### total chat ##################  -->
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="fw-bold mb-4">All from element</h4>
+        </div>
+      </div>
+
+
+
+      <!--####################### total chat ##################  -->
+
+      <div class="row my-5 g-5">
+
+        <form method="post">
+          <textarea id="summernote" name="editordata"></textarea>
+        </form>
+
+
+      </div>
+
+
+
+
+
+
+      <!-- ################### data table ############################## -->
+      <hr>
+      <div class="row">
+        <h3>Toast Example </h3>
+        <div class="col">
+          <button id="toast-success" class="btn btn-primary"> toaster success</button>
+          <button id="toast-error" class="btn btn-danger"> toaster Error</button>
+          <button id="toast-warning" class="btn btn-warning"> toaster warning</button>
+          <button id="toast-info" class="btn btn-primary"> toaster info</button>
+
+        </div>
+        <hr>
+
+         <h3>Alert Modal Example </h3>
+        <div class="col">
+          <button id="alert-success" class="btn btn-primary"> alert success</button>
+          <button id="alert-error" class="btn btn-danger"> alert Error</button>
+          <button id="alert-warning" class="btn btn-warning">alert Warning</button>
+          <button id="alert-info" class="btn btn-primary"> alert info</button>
+
+          <button id="alert-delete" class="btn btn-danger"> alert delete</button>
+
+        </div>
+
+      </div>
+
+
+      <!--###########################    main content body ########################################### -->
+
+    </div>
+
+
+  </main>
+  <script src="./js/jquery-3.5.1.js"></script>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./plugin/datatable/datatables.min.js"></script>
+  <script src="./plugin/datatable/dataTables.bootstrap5.min.js"></script>
+  <script src="./plugin/toaster/jquery.toast.js"></script>
+  <script src="./js/script.js"></script>
+
+  <script>
+
+
+    $(document).ready(function () {
+      $("#summernote").summernote({
+        placeholder: "Write something here ",
+        tabsize: 2,
+        height: 100,
+        toolbar: [
+          ["style", ["style"]],
+          ["font", ["bold", "underline", "clear"]],
+          ["color", ["color"]],
+          ["para", ["ul", "ol", "paragraph"]],
+          ["table", ["table"]],
+          ["insert", ["link", "picture", "video"]],
+          ["view", ["fullscreen", "codeview", "help"]],
+        ],
+      });
+
+    });
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
